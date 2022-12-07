@@ -15,7 +15,7 @@ body{
 	background: #1c1c1c;
 }
 
-[class*="container-"], [class*="box-"], [class*="text-"]{
+[class*="container-"], [class*="box-"], [class*="text-"], [class*="button"]{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -23,91 +23,52 @@ body{
 	text-align: center;
 }
 
-/* ------------------------------------------- Barras -------------------------------------------------- */
+/* -------------------- Campos -------------------- */
 div.field{
-	width: 250px;
-	height: 250px;
+	width: 19.53125vw;
+	height: 19.53125vw;
 	position: relative;
 }
 
-div.field span{
-	position: absolute;
-	display: block;
-	transition: .3s;
-}
-
-/* Barra Topo */
-div.field [class*="top-"]{
-	top: -6px;
-	left: 25px;
-	width: 200px;
-	height: 2px;
-	transform: rotate(15deg);
-}
-
-div.field:hover [class*="top-"]{
-	transform: rotate(0deg);
-}
-
-/* Barra Direita */
-div.field [class*="right-"]{
-	top: 25px;
-	left: 254px;
-	width: 2px;
-	height: 200px;
-	transform: rotate(-15deg);
-}
-
-div.field:hover [class*="right-"]{
-	transform: rotate(0deg);
-}
-
-/* Barra Baixo */
-div.field [class*="bottom-"]{
-	top: 254px;
-	left: 25px;
-	width: 200px;
-	height: 2px;
-	transform: rotate(15deg);
-}
-
-div.field:hover [class*="bottom-"]{
-	transform: rotate(0deg);
-}
-
-/* Barra Esquerda */
-div.field [class*="left-"]{
-	top:25px;
-	left: -6px;
-	width: 2px;
-	height: 200px;
-	transform: rotate(-15deg);
-}
-
-div.field:hover [class*="left-"]{
-	transform: rotate(0deg);
-}
-
-/* ----------------------------------------- Campos ----------------------------------------- */
 [class*="container-"]{
-	width: 250px;
-	height: 250px;
+	width: 100%;
+	height: 100%;
 	position: absolute;
 	background: #363637;
 	color: #363637;
 }
 
+[class*="container-"]:after{
+	content: '';
+	position: absolute;
+	top: -5.2vw;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform: scale(0.28);
+	transition: .4s;
+}
+
+[class*="container-"]:hover:after{
+	transform: scale(1);
+	top: 0;
+}
+
 /* Texto */
+.text p.title{
+	font-size: 2.5vw;
+}
+
 .text{
-	margin: 15px 0 15px 0;
+	margin: 1.171875vw 0 1.171875vw 0;
 	color: #eee;
 	z-index: 1;
 	transition: .4s;
 }
 
-.text p{
-	font-size: 15px;
-	margin-top: 3px;
+.text p.paragraph{
+	font-size: 1.171875vw;
+	margin-top: 0.234375vw;
 }
 
 [class*="container-"]:hover .text{
@@ -117,8 +78,8 @@ div.field:hover [class*="left-"]{
 /* Box */
 [class*="box-"]{
 	position: relative;
-	width: 70px;
-	height: 70px;
+	width: 5.46875vw;
+	height: 5.46875vw;
 	transition: .2s;
 	z-index: 1;
 	background: #363637;
@@ -130,40 +91,86 @@ div.field:hover [class*="left-"]{
 
 [class*="box-"] i{
 	position: absolute;
-	font-size: 32px;
+	font-size: 2.5vw;
 	transition: .2s;
 }
 
 /* Botão */
 [class*="button"]{
-	width: 100px;
-	height: 25px;
+	width: 7.8125vw;
+	height: 1.953125vw;
 	transition: .4s;
 	z-index: 1;
 }
 
 [class*="button"] a{
 	text-decoration: none;
-	font-size: 15px;
+	font-size: 1.171875vw;
 	color: #1c1c1c;
 }
 
-/* ------------------------------- Campo 1 -----------------------*/
-div.container-1:after{
-	background-color: rgb(52, 255, 96);
-	content: '';
+/* ---------- Barras ---------- */
+div.field span{
 	position: absolute;
-	top: -60px;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	transform: scale(0.28);
-	transition: .4s;
+	display: block;
+	transition: .3s;
 }
 
-div.container-1:hover:after{
-	transform: scale(1);
-	top: 0;
+/* Barra Topo */
+div.field [class*="top-"]{
+	top: -0.46875vw;
+	left: 1.953125vw;
+	width: 15.625vw;
+	height: 0.15625vw;
+	transform: rotate(15deg);
+}
+
+div.field:hover [class*="top-"]{
+	transform: rotate(0deg);
+}
+
+/* Barra Direita */
+div.field [class*="right-"]{
+	top: 1.953125vw;
+	left: 19.84375vw;
+	width: 0.15625vw;
+	height: 15.625vw;
+	transform: rotate(-15deg);
+}
+
+div.field:hover [class*="right-"]{
+	transform: rotate(0deg);
+}
+
+/* Barra Baixo */
+div.field [class*="bottom-"]{
+	top: 19.84375vw;
+	left: 1.953125vw;
+	width: 15.625vw;
+	height: 0.15625vw;
+	transform: rotate(15deg);
+}
+
+div.field:hover [class*="bottom-"]{
+	transform: rotate(0deg);
+}
+
+/* Barra Esquerda */
+div.field [class*="left-"]{
+	top: 1.953125vw;
+	left: -0.46875vw;
+	width:  0.15625vw;
+	height: 15.625vw;
+	transform: rotate(-15deg);
+}
+
+div.field:hover [class*="left-"]{
+	transform: rotate(0deg);
+}
+
+/* --------------- Campo 1 --------------- */
+div.container-1:after{
+	background-color: rgb(52, 255, 96);
 }
 
 /* Box */
@@ -196,27 +203,14 @@ div.container-1:hover .button-1 a{
 	color: rgb(52, 255, 96);
 }
 
-/* Linhas */
+/* Barras */
 span.top-1, span.right-1, span.bottom-1, span.left-1{
 	background: rgb(52, 255, 96);
 }
 
-/* ------------------------------- Campo 2 -----------------------*/
+/* --------------- Campo 2 --------------- */
 div.container-2:after{
 	background-color: rgb(255, 52, 245);
-	content: '';
-	position: absolute;
-	top: -60px;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	transform: scale(0.28);
-	transition: .4s;
-}
-
-div.container-2:hover:after{
-	transform: scale(1);
-	top: 0;
 }
 
 /* Box */
@@ -249,27 +243,14 @@ div.container-2:hover .button-2 a{
 	color: rgb(255, 52, 245);
 }
 
-/* Linhas */
+/* Barras */
 span.top-2, span.right-2, span.bottom-2, span.left-2{
 	background: rgb(255, 52, 245);
 }
 
-/* ------------------------------- Campo 3 -----------------------*/
+/* --------------- Campo 3 --------------- */
 div.container-3:after{
 	background-color: rgb(62, 98, 255);
-	content: '';
-	position: absolute;
-	top: -60px;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	transform: scale(0.28);
-	transition: .4s;
-}
-
-div.container-3:hover:after{
-	transform: scale(1);
-	top: 0;
 }
 
 /* Box */
@@ -302,7 +283,88 @@ div.container-3:hover .button-3 a{
 	color: rgb(62, 98, 255);
 }
 
-/* Linhas */
+/* Barras */
 span.top-3, span.right-3, span.bottom-3, span.left-3{
 	background: rgb(62, 98, 255);
 }
+
+@media only screen and (max-width:660px){
+	body{
+		width: 100%;
+		min-height: 100vh;
+		flex-direction: column;
+	}
+
+	[class*="container-"]:after{
+		top: -5.2vw;
+	}
+
+	/* Texto */
+	.text p.title{
+		font-size: 2.5vw;
+	}
+
+	.text{
+		margin: 1.171875vw 0 1.171875vw 0;
+	}
+
+	.text p.paragraph{
+		font-size: 1.171875vw;
+		margin-top: 0.234375vw;
+	}
+
+	/* Box */
+	[class*="box-"]{
+		width: 5.46875vw;
+		height: 5.46875vw;
+	}
+
+	[class*="box-"] i{
+		font-size: 2.5vw;
+	}
+	
+	/* Botão */
+	[class*="button"]{
+		width: 7.8125vw;
+		height: 1.953125vw;
+	}
+	
+	[class*="button"] a{
+		font-size: 1.171875vw;
+	}
+
+	/* ---------- Barras ---------- */
+	/* Barra Topo */
+	div.field [class*="top-"]{
+		top: -0.46875vw;
+		left: 1.953125vw;
+		width: 15.625vw;
+		height: 0.15625vw;
+	}
+
+	/* Barra Direita */
+	div.field [class*="right-"]{
+		top: 1.953125vw;
+		left: 19.84375vw;
+		width: 0.15625vw;
+		height: 15.625vw;
+	}
+
+	/* Barra Baixo */
+	div.field [class*="bottom-"]{
+		top: 19.84375vw;
+		left: 1.953125vw;
+		width: 15.625vw;
+		height: 0.15625vw;
+	}
+
+	/* Barra Esquerda */
+	div.field [class*="left-"]{
+		top: 1.953125vw;
+		left: -0.46875vw;
+		width:  0.15625vw;
+		height: 15.625vw;
+	}
+}
+
+/* Passar as medidas dos elementos dentro do média para px, adequar com o tamanho da tela e depois passar as medidas para vw novamente. */
