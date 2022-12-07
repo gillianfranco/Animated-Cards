@@ -1,0 +1,308 @@
+*{
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	background: #1c1c1c;
+}
+
+[class*="container-"], [class*="box-"], [class*="text-"]{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+/* ------------------------------------------- Barras -------------------------------------------------- */
+div.field{
+	width: 250px;
+	height: 250px;
+	position: relative;
+}
+
+div.field span{
+	position: absolute;
+	display: block;
+	transition: .3s;
+}
+
+/* Barra Topo */
+div.field [class*="top-"]{
+	top: -6px;
+	left: 25px;
+	width: 200px;
+	height: 2px;
+	transform: rotate(15deg);
+}
+
+div.field:hover [class*="top-"]{
+	transform: rotate(0deg);
+}
+
+/* Barra Direita */
+div.field [class*="right-"]{
+	top: 25px;
+	left: 254px;
+	width: 2px;
+	height: 200px;
+	transform: rotate(-15deg);
+}
+
+div.field:hover [class*="right-"]{
+	transform: rotate(0deg);
+}
+
+/* Barra Baixo */
+div.field [class*="bottom-"]{
+	top: 254px;
+	left: 25px;
+	width: 200px;
+	height: 2px;
+	transform: rotate(15deg);
+}
+
+div.field:hover [class*="bottom-"]{
+	transform: rotate(0deg);
+}
+
+/* Barra Esquerda */
+div.field [class*="left-"]{
+	top:25px;
+	left: -6px;
+	width: 2px;
+	height: 200px;
+	transform: rotate(-15deg);
+}
+
+div.field:hover [class*="left-"]{
+	transform: rotate(0deg);
+}
+
+/* ----------------------------------------- Campos ----------------------------------------- */
+[class*="container-"]{
+	width: 250px;
+	height: 250px;
+	position: absolute;
+	background: #363637;
+	color: #363637;
+}
+
+/* Texto */
+.text{
+	margin: 15px 0 15px 0;
+	color: #eee;
+	z-index: 1;
+	transition: .4s;
+}
+
+.text p{
+	font-size: 15px;
+	margin-top: 3px;
+}
+
+[class*="container-"]:hover .text{
+	color: #363637;
+}
+
+/* Box */
+[class*="box-"]{
+	position: relative;
+	width: 70px;
+	height: 70px;
+	transition: .2s;
+	z-index: 1;
+	background: #363637;
+}
+
+[class*="container-"]:hover [class*="box-"]{
+	border:2px solid #1c1c1c;
+}
+
+[class*="box-"] i{
+	position: absolute;
+	font-size: 32px;
+	transition: .2s;
+}
+
+/* Botão */
+[class*="button"]{
+	width: 100px;
+	height: 25px;
+	transition: .4s;
+	z-index: 1;
+}
+
+[class*="button"] a{
+	text-decoration: none;
+	font-size: 15px;
+	color: #1c1c1c;
+}
+
+/* ------------------------------- Campo 1 -----------------------*/
+div.container-1:after{
+	background-color: rgb(52, 255, 96);
+	content: '';
+	position: absolute;
+	top: -60px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform: scale(0.28);
+	transition: .4s;
+}
+
+div.container-1:hover:after{
+	transform: scale(1);
+	top: 0;
+}
+
+/* Box */
+div.box-1{
+	border: 2px solid rgb(52, 255, 96);
+}
+
+div.box-1 i{
+	color: rgb(52, 255, 96);
+}
+
+div.field:hover div.box-1 i{
+	color: #363637;
+}
+
+div.field:hover div.box-1{
+	background: rgb(52, 255, 96);
+}
+
+/* Botão */
+.button-1{
+	background: rgb(52, 255, 96);
+}
+
+div.container-1:hover .button-1{
+	background: #363637;
+}
+
+div.container-1:hover .button-1 a{
+	color: rgb(52, 255, 96);
+}
+
+/* Linhas */
+span.top-1, span.right-1, span.bottom-1, span.left-1{
+	background: rgb(52, 255, 96);
+}
+
+/* ------------------------------- Campo 2 -----------------------*/
+div.container-2:after{
+	background-color: rgb(255, 52, 245);
+	content: '';
+	position: absolute;
+	top: -60px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform: scale(0.28);
+	transition: .4s;
+}
+
+div.container-2:hover:after{
+	transform: scale(1);
+	top: 0;
+}
+
+/* Box */
+div.box-2{
+	border: 2px solid rgb(255, 52, 245);
+}
+
+div.box-2 i{
+	color: rgb(255, 52, 245);
+}
+
+div.field:hover div.box-2 i{
+	color: #363637;
+}
+
+div.field:hover div.box-2{
+	background: rgb(255, 52, 245);
+}
+
+/* Botão */
+.button-2{
+	background: rgb(255, 52, 245);
+}
+
+div.container-2:hover .button-2{
+	background: #363637;
+}
+
+div.container-2:hover .button-2 a{
+	color: rgb(255, 52, 245);
+}
+
+/* Linhas */
+span.top-2, span.right-2, span.bottom-2, span.left-2{
+	background: rgb(255, 52, 245);
+}
+
+/* ------------------------------- Campo 3 -----------------------*/
+div.container-3:after{
+	background-color: rgb(62, 98, 255);
+	content: '';
+	position: absolute;
+	top: -60px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform: scale(0.28);
+	transition: .4s;
+}
+
+div.container-3:hover:after{
+	transform: scale(1);
+	top: 0;
+}
+
+/* Box */
+div.box-3{
+	border: 2px solid rgb(62, 98, 255);
+}
+
+div.box-3 i{
+	color: rgb(62, 98, 255);
+}
+
+div.field:hover div.box-3 i{
+	color: #363637;
+}
+
+div.field:hover div.box-3{
+	background: rgb(62, 98, 255);
+}
+
+/* Botão */
+.button-3{
+	background: rgb(62, 98, 255);
+}
+
+div.container-3:hover .button-3{
+	background: #363637;
+}
+
+div.container-3:hover .button-3 a{
+	color: rgb(62, 98, 255);
+}
+
+/* Linhas */
+span.top-3, span.right-3, span.bottom-3, span.left-3{
+	background: rgb(62, 98, 255);
+}
