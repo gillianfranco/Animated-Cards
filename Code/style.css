@@ -23,6 +23,14 @@ body{
 	text-align: center;
 }
 
+@media only screen and (max-width:660px){
+	body{
+		width: 100%;
+		min-height: 100vh;
+		flex-direction: column;
+	}
+}
+
 /* -------------------- Campos -------------------- */
 div.field{
 	width: 19.53125vw;
@@ -286,12 +294,4 @@ div.container-3:hover .button-3 a{
 /* Barras */
 span.top-3, span.right-3, span.bottom-3, span.left-3{
 	background: rgb(62, 98, 255);
-}
-
-@media only screen and (max-width:660px){
-	body{
-		width: 100%;
-		min-height: 100vh;
-		flex-direction: column;
-	}
 }
